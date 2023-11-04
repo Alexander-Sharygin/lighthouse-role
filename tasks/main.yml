@@ -1,0 +1,7 @@
+---
+- name: Lighthouse | Copy form git
+  become: true
+  git:
+    repo: "{{ lighthouse_vcs }}"
+    version: master
+    dest: "{{ document_root }}/{{ app_root }}"
